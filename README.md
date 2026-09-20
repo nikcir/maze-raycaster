@@ -1,6 +1,6 @@
 # Maze Raycaster
 
-A first-person maze nagivation game built with raycasting, reflections, and enemy pathfinding.
+A first-person maze navigation game built with raycasting, reflections, and enemy pathfinding.
 
 ## Controls
 
