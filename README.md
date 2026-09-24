@@ -19,7 +19,7 @@ The player moves through a maze while the raycaster turns a 2D grid into a 3D-lo
 
 ## How it works
 
-A ray is cast for each screen column, checked against the maze, and the distance is converted into wall height. The farther the wall, the shorter it appears on screen. The red rays are the initial rays from the player, while the green ones are reflected rays.
+A ray is cast for each screen column, checked against the maze, and the distance is converted into wall height. The farther the wall, the shorter it appears on screen. The red rays are the initial rays from the player, while the green ones are reflected rays. There are 512 rays here, so they appear as a solid. The blue dot is the player.
 
 ![alt text](README_resources/image.png)
 
@@ -29,9 +29,10 @@ The effect depends on the number of rays, each column is effectively one sample,
 
 ## Raytracing
 
-When a ray hits a reflective wall, the renderer flips the direction using the wall normal and traces a new ray from that point. This recursive pass keeps going for each bounce, so a single primary ray can generate several reflected rays and produce a layered mirror effect. The second image shows this idea in practice: red rays are the initial cast from the player, while green rays are the reflected branches that continue the trace through the maze. There are 512 rays here, so they appear as a solid. The blue dot is the player.
-
+When a ray hits a reflective wall, the renderer flips the direction using the wall normal and traces a new ray from that point. This recursive pass keeps going for each bounce, so a single primary ray can generate several reflected rays and produce a layered mirror effect. 
+The picture shows a single mirror reflecting, player is the blue object
 ![alt text](README_resources/image-1.png)
+Here the player is standing between 2 mirrors recursively reflecting each other. 
 ![alt text](README_resources/image-2.png)
 
 ## Custom antialiasing
