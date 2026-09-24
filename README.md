@@ -29,7 +29,7 @@ The effect depends on the number of rays, each column is effectively one sample,
 
 ## Raytracing
 
-When a ray hits a reflective wall, the renderer flips the direction using the wall normal and traces a new ray from that point. This recursive pass keeps going for each bounce, so a single primary ray can generate several reflected rays and produce a layered mirror effect. The second image shows this idea in practice: red rays are the initial cast from the player, while green rays are the reflected branches that continue the trace through the maze.
+When a ray hits a reflective wall, the renderer flips the direction using the wall normal and traces a new ray from that point. This recursive pass keeps going for each bounce, so a single primary ray can generate several reflected rays and produce a layered mirror effect. The second image shows this idea in practice: red rays are the initial cast from the player, while green rays are the reflected branches that continue the trace through the maze. There are 512 rays here, so they appear as a solid. The blue dot is the player.
 
 ![alt text](README_resources/image-1.png)
 ![alt text](README_resources/image-2.png)
